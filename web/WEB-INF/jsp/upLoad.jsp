@@ -1,0 +1,28 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<!-- http://localhost:8080/testmvc/html/register.html
+            http://localhost:8080/testmvc/test/register
+
+        -->
+
+<!-- in terms of fileupload, the form must the following 2 rules:
+
+ 1. method = post
+ 2. enctype = multipart/form-data
+
+ enctype="application/x-www-form-urlencoded":username=?&password=?
+ enctype = multipart/form-data: form submit in binary format
+ -->
+
+<form action="/test/register" method="post" enctype="multipart/form-data">
+    <input type="text" name="username" />
+    <input type="password" name="password" />
+    <input type="file" name="photo"/>
+    <button type="submit">register</button>
+</form>
+</body>
+</html>
